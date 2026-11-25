@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko" data-astryx-theme="stone" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커넥틀리 CONNECTLY — 연결이 만드는 무한한 가치</title>
+  <meta name="description" content="커넥틀리는 트렉시의 기술 자회사입니다. 공급사와 바이어, 바이어와 소비자, 사람과 사람을 연결하는 B2B 시스템 TOS, 셀러 OMS, 협업 시스템을 만들어 유통 현장의 AX를 이끕니다.">
+  <meta property="og:title" content="커넥틀리 CONNECTLY">
+  <meta property="og:description" content="연결이 만드는 무한한 가치. 트렉시의 기술 자회사 커넥틀리는 B2B 시스템 TOS, 셀러 OMS, 협업 시스템을 만듭니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://connectly.co.kr/">
+  <meta property="og:image" content="https://connectly.co.kr/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="CONNECTLY">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://connectly.co.kr/">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/vendor/astryx/stone/fonts.css">
+  <link rel="stylesheet" href="css/vendor/astryx/stone/theme.css">
+  <link rel="stylesheet" href="css/style.css?v=20261126z">
+  <link rel="stylesheet" href="css/theme-astryx.css?v=20261126y">
+</head>
+<body class="is-intro">
+
+  <!-- ===== 인트로 (탭당 1회, ?intro=1 강제 재생, 움직임 줄이기 설정 시 생략, 클릭·Esc 로 건너뜀) =====
+       점 네트워크 → ∞ 고리 → CONNECTLY 워드마크 → 글자가 사라지고 ∞ 만 남아 히어로 배경 고리 자리로 들어감 -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <canvas class="intro__net"></canvas>
+    <div class="intro__stage">
+      <div class="intro__logo">
+        <img class="intro__word" src="assets/logo-white.png" alt="" width="1280" height="169">
+        <div class="intro__markwrap">
+          <svg class="intro__mark" viewBox="0 0 316 169" aria-hidden="true">
+            <path d="M116.7,37.3 A57,57 0 1 0 127.9,120.3 L188.1,47.7 A57,57 0 1 1 199.3,130.7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 헤더 ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="커넥틀리 홈" data-i18n-aria="a11y.home">
+        <img src="assets/logo-white.png" alt="CONNECTLY" class="logo__img">
+      </a>
+      <nav class="nav" id="nav" aria-label="주요 메뉴" data-i18n-aria="a11y.nav">
+        <ul class="nav__list">
+          <li><a href="#about" class="nav__link">Who we are</a></li>
+          <li><a href="#build" class="nav__link">What we build</a></li>
+          <li><a href="#why" class="nav__link">Why Connectly</a></li>
+          <li><a href="#history" class="nav__link">History</a></li>
+          <li><a href="#group" class="nav__link">Trexi</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <div class="lang" role="group" aria-label="Language">
+          <span class="lang__pill" aria-hidden="true"></span>
+          <button type="button" class="lang__btn is-active" data-lang="ko" aria-pressed="true">KO</button>
+          <span class="lang__sep" aria-hidden="true"></span>
+          <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 히어로 ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__grid"></div>
+        <!-- 로고 ∞ 고리: 희미한 윤곽선 위로 보라→시안 빛이 한 획을 따라 돈다 -->
+        <svg class="hero__loop" viewBox="0 0 316 169" aria-hidden="true" style="--loop-len: 632">
+          <defs>
+            <linearGradient id="heroLoopGrad" gradientUnits="userSpaceOnUse" x1="40" y1="20" x2="280" y2="150">
+              <stop offset="0" stop-color="#8b6cff"/>
+              <stop offset="1" stop-color="#22d3ee"/>
+            </linearGradient>
+            <filter id="heroLoopBlur" x="-20%" y="-40%" width="140%" height="180%">
+              <feGaussianBlur stdDeviation="7"/>
+            </filter>
+          </defs>
+          <path class="hero__loop-base" d="M116.7,37.3 A57,57 0 1 0 127.9,120.3 L188.1,47.7 A57,57 0 1 1 199.3,130.7"/>
+          <path class="hero__loop-glow" d="M116.7,37.3 A57,57 0 1 0 127.9,120.3 L188.1,47.7 A57,57 0 1 1 199.3,130.7"/>
+          <path class="hero__loop-light" d="M116.7,37.3 A57,57 0 1 0 127.9,120.3 L188.1,47.7 A57,57 0 1 1 199.3,130.7"/>
+        </svg>
+      </div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow fade-up">
+          <span class="dot"></span>Connect, infinitely.
+        </p>
+        <h1 class="hero__title fade-up" data-i18n="hero.title">
+          연결이 만드는<br>
+          <span class="gradient-text">무한한 가치</span>
+        </h1>
+        <p class="hero__desc fade-up" data-i18n="hero.desc">
+          커넥틀리는 공급사와 바이어, 바이어와 소비자, 사람과 사람, 비즈니스와 비즈니스가 이어지는 시스템을 만들고,
+          그 위에서 유통 현장의 <strong>AX</strong>(AI 전환)를 리드합니다.
+        </p>
+        <div class="hero__actions fade-up">
+          <a href="#build" class="btn btn--primary" data-i18n="hero.cta1">무엇을 만드는지 보기</a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta2">파트너 문의</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 회사소개 ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__head fade-up">
+          <p class="section__label">Who we are</p>
+          <h2 class="section__title" data-i18n="about.title">유통 현장을 아는<br>커머스 테크 컴퍼니</h2>
+          <p class="section__desc" data-i18n="about.desc">
+            커넥틀리는 2020년 설립 이후 다양한 형태의 B2C 커머스 플랫폼을 직접 기획·개발·운영해 왔습니다.
+            이 경험을 바탕으로 2023년 트렉시에 편입된 뒤에는 트렉시의 B2C·B2B 플랫폼과 내부 협업 시스템을 개발·운영하며 트렉시의 AX 전환을 담당하고 있습니다.
+          </p>
+        </div>
+
+        <div class="stats fade-up">
+          <div class="stat">
+            <strong class="stat__num"><span data-count="2020" data-plain="true">2020</span></strong>
+            <span class="stat__label" data-i18n="stat.1">설립</span>
+          </div>
+          <div class="stat">
+            <strong class="stat__num"><span data-count="3">0</span></strong>
+            <span class="stat__label" data-i18n="stat.2">운영 중인 시스템 (TOS · 셀러 OMS · 협업)</span>
+          </div>
+          <div class="stat">
+            <strong class="stat__num"><span data-count="2023" data-plain="true">2023</span></strong>
+            <span class="stat__label" data-i18n="stat.3">트렉시 자회사 편입</span>
+          </div>
+          <div class="stat">
+            <strong class="stat__num"><span data-count="300">0</span><em>+</em></strong>
+            <span class="stat__label" data-i18n="stat.4">트렉시 유통 브랜드</span>
+          </div>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__card fade-up">
+            <span class="about__icon">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            </span>
+            <h3>Mission</h3>
+            <p data-i18n="about.mission">유통 현장의 반복 및 수기 업무를 시스템이 처리하여, 담당자가 거래와 파트너 관계에 시간을 쓸 수 있도록 합니다.</p>
+          </div>
+          <div class="about__card fade-up">
+            <span class="about__icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
+            </span>
+            <h3>Vision</h3>
+            <p data-i18n="about.vision">공급사와 바이어, 바이어와 소비자, 사람과 사람이 하나의 시스템 위에서 끊기지 않고 이어지는 유통 플랫폼을 만듭니다.</p>
+          </div>
+          <div class="about__card fade-up">
+            <span class="about__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+            </span>
+            <h3>How we work</h3>
+            <p data-i18n="about.how">새 기능은 트렉시의 실제 업무에 먼저 적용해 검증하고, 검증된 것만 플랫폼으로 넓혀 갑니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What we build ===== -->
+    <section class="section build" id="build">
+      <div class="container">
+        <div class="section__head fade-up">
+          <p class="section__label">What we build</p>
+          <h2 class="section__title" data-i18n="build.title">우리가 만드는 것</h2>
+          <p class="section__desc" data-i18n="build.desc">커넥틀리가 개발·운영하는 세 개의 시스템과 기술 역량입니다.</p>
+        </div>
+
+        <div class="build__list">
+
+          <article class="product fade-up">
+            <div class="product__main">
+            <div class="product__meta">
+              <span class="product__num">01</span>
+              <span class="badge badge--live" data-i18n="p1.badge1">내부 운영 중</span>
+              <span class="badge badge--soon" data-i18n="p1.badge2">B2B 플랫폼 확장 중</span>
+            </div>
+            <div class="product__body">
+              <h3 class="product__title">TOS <small data-i18n="p1.sub">Trexi Order System · 가칭</small></h3>
+              <p class="product__desc" data-i18n="p1.desc">
+                트렉시의 오퍼·오더 업무를 관리하는 B2B 시스템입니다.
+                공급사에서 받은 오퍼를 AI가 표준 양식으로 정리하고, 담당자 검토와 바이어 전달 이력을 한곳에서 관리합니다.
+                향후 공급사와 바이어가 직접 참여하는 B2B 플랫폼으로 확장할 계획입니다.
+              </p>
+              <ul class="product__features">
+                <li data-i18n="p1.f1"><em>운영 중</em>AI 오퍼 표준화 (헤더 매핑 · 메타 추출 · 사이즈 인식)</li>
+                <li data-i18n="p1.f2"><em>운영 중</em>오퍼 등록 · 검토 · 바이어 전달 이력 관리</li>
+                <li data-i18n="p1.f3"><em class="is-next">확장 중</em>공급사 직접 오퍼 등록 · 바이어 회원 가입</li>
+                <li data-i18n="p1.f4"><em class="is-next">확장 중</em>오더 적합성 추천 · 바이어 즉시 오퍼 확인·주문</li>
+              </ul>
+              <a href="https://trexi.kr/business/tos/" target="_blank" rel="noopener" class="link-arrow" data-i18n="p1.link">트렉시 TOS 소개 보기</a>
+            </div>
+            </div>
+            <figure class="product__shot">
+              <div class="shot shot--tos">
+                <div class="shot__bar"><i></i><i></i><i></i><b data-i18n="shot.tos.title">TOS · 오퍼 현황</b></div>
+                <div class="shot__stats">
+                  <div class="shot__anim" style="--i:0"><small data-i18n="shot.tos.s1">3개월 유입</small><strong>270</strong></div>
+                  <div class="shot__anim" style="--i:1"><small data-i18n="shot.tos.s2">검토 중</small><strong>13</strong></div>
+                  <div class="shot__anim" style="--i:2"><small data-i18n="shot.tos.s3">완료</small><strong class="ok">44</strong></div>
+                </div>
+                <div class="shot__panel">
+                  <div class="shot__head"><b data-i18n="shot.tos.h1">전체 팀 · 지금 진행 중</b><span class="shot__pill" data-i18n="shot.tos.h1b">오퍼 13건</span></div>
+                  <div class="shot__row shot__anim" style="--i:3"><code>10020100WH48</code><span class="shot__name">Sports Brand A · 27SS order sheet</span><span class="shot__dots d3"></span><time>12:56</time></div>
+                  <div class="shot__row shot__anim" style="--i:4"><code>L45395500</code><span class="shot__name">Outdoor Brand B · FW27 pricelist</span><span class="shot__dots d2"></span><time>12:46</time></div>
+                  <div class="shot__row shot__anim" style="--i:5"><code>228112</code><span class="shot__name">Headwear Brand C · pre-book offer</span><span class="shot__dots d1"></span><time>11.20</time></div>
+                </div>
+                <div class="shot__panel">
+                  <div class="shot__head"><b data-i18n="shot.tos.h2">마감 예정</b><span class="shot__pill is-warn" data-i18n="shot.tos.h2b">D-3 이내 47건</span></div>
+                  <div class="shot__row shot__anim" style="--i:6"><span class="shot__badge" data-i18n="shot.today">오늘</span><span class="shot__name">Sports Brand D</span><span class="shot__tag">1TEAM_KR</span><span class="shot__state" data-i18n="shot.tos.pending">미진행</span></div>
+                  <div class="shot__row shot__anim" style="--i:7"><span class="shot__badge" data-i18n="shot.today">오늘</span><span class="shot__name">Golf Brand E</span><span class="shot__tag">2TEAM_BTOB</span><span class="shot__state" data-i18n="shot.tos.pending">미진행</span></div>
+                </div>
+              </div>
+              <figcaption class="shot__note" data-i18n="shot.note">예시 화면 · 실제 데이터가 아닙니다</figcaption>
+            </figure>
+          </article>
+
+          <article class="product fade-up">
+            <div class="product__main">
+            <div class="product__meta">
+              <span class="product__num">02</span>
+              <span class="badge badge--live" data-i18n="p2.badge">운영 중</span>
+            </div>
+            <div class="product__body">
+              <h3 class="product__title">Seller OMS <small data-i18n="p2.sub">셀러 입점형 주문관리 · NAVER SmartStore 연동</small></h3>
+              <p class="product__desc" data-i18n="p2.desc">
+                셀러가 입점해 상품을 등록하고 주문을 처리하는 주문관리 시스템입니다.
+                네이버 스마트스토어 디즈니 브랜드샵과 상품·주문 정보가 양방향으로 연동되어, 상품 관리와 주문 수집, 발송, CS를 OMS 안에서 처리할 수 있습니다.
+              </p>
+              <ul class="product__features">
+                <li data-i18n="p2.f1">셀러 가입 · 상품 등록 및 변경</li>
+                <li data-i18n="p2.f2">상품·주문 양방향 자동 연동 (네이버 스마트스토어)</li>
+                <li data-i18n="p2.f3">주문 수집 · 발송 처리 · CS 처리</li>
+                <li data-i18n="p2.f4">연동 채널 확장 예정 (현재 네이버 스마트스토어)</li>
+              </ul>
+            </div>
+            </div>
+            <figure class="product__shot">
+              <div class="shot shot--oms">
+                <div class="shot__bar"><i></i><i></i><i></i><b data-i18n="shot.oms.title">Seller OMS · 대시보드</b></div>
+                <div class="shot__kpis">
+                  <div class="shot__anim" style="--i:0"><small data-i18n="shot.oms.k1">출고대기</small><strong>7</strong></div>
+                  <div class="shot__anim" style="--i:1"><small data-i18n="shot.oms.k2">배송준비중</small><strong>11</strong></div>
+                  <div class="shot__anim is-warn" style="--i:2"><small data-i18n="shot.oms.k3">배송지연</small><strong>0</strong></div>
+                  <div class="shot__anim" style="--i:3"><small data-i18n="shot.oms.k4">취소 요청</small><strong>0</strong></div>
+                  <div class="shot__anim" style="--i:4"><small data-i18n="shot.oms.k5">반품 요청</small><strong>1</strong></div>
+                  <div class="shot__anim" style="--i:5"><small data-i18n="shot.oms.k6">문의 미답변</small><strong>3</strong></div>
+                </div>
+                <div class="shot__cols">
+                  <div class="shot__panel shot__anim" style="--i:6">
+                    <div class="shot__head"><b data-i18n="shot.oms.p1">통합 주문 추이</b></div>
+                    <div class="shot__pair"><div><small data-i18n="shot.today">오늘</small><strong>41</strong></div><div><small data-i18n="shot.yesterday">어제</small><strong>28</strong></div></div>
+                    <span class="shot__delta is-up">↗ 46.4%</span>
+                  </div>
+                  <div class="shot__panel shot__anim" style="--i:7">
+                    <div class="shot__head"><b data-i18n="shot.oms.p2">통합 매출 추이</b></div>
+                    <div class="shot__pair"><div><small data-i18n="shot.today">오늘</small><strong>₩8,630,000</strong></div><div><small data-i18n="shot.yesterday">어제</small><strong>₩6,120,000</strong></div></div>
+                    <span class="shot__delta is-up">↗ 41.0%</span>
+                  </div>
+                </div>
+                <div class="shot__foot shot__anim" style="--i:8"><span class="shot__live"></span><span data-i18n="shot.oms.sync">NAVER 스마트스토어 연동 · 마지막 동기화 15:16</span></div>
+              </div>
+              <figcaption class="shot__note" data-i18n="shot.note">예시 화면 · 실제 데이터가 아닙니다</figcaption>
+            </figure>
+          </article>
+
+          <article class="product fade-up">
+            <div class="product__main">
+            <div class="product__meta">
+              <span class="product__num">03</span>
+              <span class="badge badge--live" data-i18n="p3.badge">트렉시 전사 사용 중</span>
+            </div>
+            <div class="product__body">
+              <h3 class="product__title" data-i18n="p3.title">워크 매니지먼트 시스템 <small>협업 · 일감 관리 · 가칭</small></h3>
+              <p class="product__desc" data-i18n="p3.desc">
+                트렉시 임직원이 사용하는 협업·일감 관리 시스템입니다.
+                프로젝트 단위로 일감을 등록하고, 유관 부서와 외부 협력사가 함께 진행 상황을 관리합니다.
+                트렉시 AX 전환 과제의 하나로 2026년 11월부터 사용하고 있습니다.
+              </p>
+              <ul class="product__features">
+                <li data-i18n="p3.f1">일감 등록 · 담당 지정 · 진행 상태 관리</li>
+                <li data-i18n="p3.f2">프로젝트별 유관 부서 협업</li>
+                <li data-i18n="p3.f3">외부 협업사 초대 · 공동 작업</li>
+                <li data-i18n="p3.f4">트렉시 업무 흐름에 맞춘 설계</li>
+              </ul>
+            </div>
+            </div>
+            <figure class="product__shot">
+              <div class="shot shot--wm">
+                <div class="shot__bar"><i></i><i></i><i></i><b data-i18n="shot.wm.title">Work Management · 프로젝트 보드</b></div>
+                <div class="shot__proj"><b data-i18n="shot.wm.proj">트렉시 AX 프로젝트</b><span class="shot__chip" data-i18n="shot.wm.inprog">진행 중</span><span class="shot__muted" data-i18n="shot.wm.members">멤버 44</span></div>
+                <div class="shot__tabs"><span data-i18n="shot.wm.t1">요약</span><span class="is-on" data-i18n="shot.wm.t2">보드</span><span data-i18n="shot.wm.t3">캘린더</span><span data-i18n="shot.wm.t4">타임라인</span></div>
+                <div class="shot__board">
+                  <div class="shot__col">
+                    <div class="shot__colhead"><span class="dot"></span><b data-i18n="shot.wm.c1">할 일</b><i>2</i></div>
+                    <div class="shot__card shot__anim" style="--i:0"><b><span data-i18n="shot.wm.k1">오퍼 자동 분류 규칙 정리</span></b><div class="shot__cardmeta"><span class="shot__avatar"></span><span class="shot__chip" data-i18n="shot.wm.todo">할 일</span><time>12/02</time></div></div>
+                    <div class="shot__card shot__anim" style="--i:1"><b><span data-i18n="shot.wm.k2">협력사 초대 흐름 점검</span></b><div class="shot__cardmeta"><span class="shot__avatar"></span><span class="shot__chip" data-i18n="shot.wm.todo">할 일</span><time>12/04</time></div></div>
+                  </div>
+                  <div class="shot__col">
+                    <div class="shot__colhead"><span class="dot is-blue"></span><b data-i18n="shot.wm.c2">진행 중</b><i>4</i></div>
+                    <div class="shot__card shot__anim" style="--i:2"><b><span data-i18n="shot.wm.k3">일감 내 메신저 개발</span></b><div class="shot__cardmeta"><span class="shot__avatar"></span><span class="shot__chip" data-i18n="shot.wm.inprog">진행 중</span><time>11/27</time></div><span class="shot__prog"><i style="width:90%"></i></span></div>
+                    <div class="shot__card shot__anim" style="--i:3"><b><span data-i18n="shot.wm.k4">회의 녹음 · AI 요약 기능</span></b><div class="shot__cardmeta"><span class="shot__avatar"></span><span class="shot__chip" data-i18n="shot.wm.inprog">진행 중</span><time>11/28</time></div><span class="shot__prog"><i style="width:35%"></i></span></div>
+                  </div>
+                  <div class="shot__col">
+                    <div class="shot__colhead"><span class="dot is-green"></span><b data-i18n="shot.wm.c3">완료</b><i>10</i></div>
+                    <div class="shot__card shot__anim" style="--i:4"><b><span data-i18n="shot.wm.k5">개인 캘린더 연동</span></b><div class="shot__cardmeta"><span class="shot__avatar"></span><span class="shot__chip" data-i18n="shot.wm.done">완료</span><time>11/25</time></div></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption class="shot__note" data-i18n="shot.note">예시 화면 · 실제 데이터가 아닙니다</figcaption>
+            </figure>
+          </article>
+
+          <aside class="capability fade-up">
+            <div class="capability__text">
+              <div class="product__meta">
+                <span class="product__num">04</span>
+                <span class="badge">Capability</span>
+              </div>
+              <h3 class="product__title">Commerce Engineering <small data-i18n="p4.sub">플랫폼 구축 · 데이터 · AI</small></h3>
+              <p class="product__desc" data-i18n="p4.desc">
+                10만 개 규모의 상품 카탈로그 운영, 다채널 주문 통합, 해외 마켓플레이스 연동, 유통 데이터를 활용한 AI 기능 개발 경험을 바탕으로 새로운 시스템을 설계합니다.
+              </p>
+            </div>
+            <ul class="capability__tiles">
+              <li><strong><span data-count="100000" data-sep="true">0</span><em>+</em></strong><span data-i18n="cap.1">상품 카탈로그 운영</span></li>
+              <li><strong><span data-count="10">0</span><em>+</em></strong><span data-i18n="cap.2">국내외 채널 API 연동</span></li>
+              <li><strong><span data-count="2020" data-plain="true">2020</span><em>~</em></strong><span data-i18n="cap.3">커머스 플랫폼 설계 · 운영</span></li>
+              <li><strong>AI</strong><span data-i18n="cap.4">라인시트 표준화 · 가격 분석 · 업무 AX</span></li>
+            </ul>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 강점 ===== -->
+    <section class="section why" id="why">
+      <div class="container why__inner">
+        <div class="why__text fade-up">
+          <p class="section__label">Why Connectly</p>
+          <h2 class="section__title" data-i18n="why.title">우리가<br>연결하는 것들</h2>
+          <p class="section__desc" data-i18n="why.desc">
+            커넥틀리의 모든 제품은 네 가지 연결 위에 서 있습니다.
+            매일 오가는 수백 개 브랜드의 오퍼와 오더가 요구사항의 출발점이 되어 연결이 끊기지 않고 순환할 때, 가치는 한계 없이 커집니다.
+          </p>
+          <div class="why__map fade-up" aria-hidden="true">
+            <svg viewBox="0 0 360 330">
+              <defs>
+                <linearGradient id="whyMapGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="360" y2="330">
+                  <stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#22d3ee"/>
+                </linearGradient>
+              </defs>
+              <g class="why__map-base"><path d="M72,62 L288,62 L330,165 L288,268 L72,268 L30,165 Z"/><path d="M72,62 L180,165"/><path d="M288,62 L180,165"/><path d="M330,165 L180,165"/><path d="M288,268 L180,165"/><path d="M72,268 L180,165"/><path d="M30,165 L180,165"/></g>
+              <g class="why__map-flows">
+                <path class="f f-1" d="M72,62 L180,165 L288,62"/>
+                <path class="f f-2" d="M288,62 L180,165 L330,165"/>
+                <path class="f f-3" d="M72,268 L180,165 L288,268"/>
+                <path class="f f-4" d="M72,62 L288,62 L330,165 L288,268 L72,268 L30,165 Z"/>
+              </g>
+              <g class="why__map-center" transform="translate(145.2 146.4) scale(0.22)"><path d="M116.7,37.3 A57,57 0 1 0 127.9,120.3 L188.1,47.7 A57,57 0 1 1 199.3,130.7"/></g>
+<g class="why__map-node n-sup"><circle class="why__map-halo" cx="72" cy="62" r="24"/><circle class="why__map-dot" cx="72" cy="62" r="16"/><g class="why__map-glyph" transform="translate(61 47)"><rect x="4.5" y="9.5" width="13" height="13" rx="2.5"/><path d="M4.5 14h13"/></g><text x="72" y="92" text-anchor="middle" data-i18n="map.sup">공급사</text></g>
+<g class="why__map-node n-buyer"><circle class="why__map-halo" cx="288" cy="62" r="24"/><circle class="why__map-dot" cx="288" cy="62" r="16"/><g class="why__map-glyph" transform="translate(277 47)"><circle cx="11" cy="12" r="4"/><path d="M4 24c1.2-4 3.6-6 7-6s5.8 2 7 6"/></g><text x="288" y="92" text-anchor="middle" data-i18n="map.buyer">바이어</text></g>
+<g class="why__map-node n-cons"><circle class="why__map-halo" cx="330" cy="165" r="24"/><circle class="why__map-dot" cx="330" cy="165" r="16"/><g class="why__map-glyph" transform="translate(319 150)"><circle cx="11" cy="12" r="4"/><path d="M4 24c1.2-4 3.6-6 7-6s5.8 2 7 6"/></g><text x="330" y="195" text-anchor="middle" data-i18n="map.cons">소비자</text></g>
+<g class="why__map-node n-part"><circle class="why__map-halo" cx="288" cy="268" r="24"/><circle class="why__map-dot" cx="288" cy="268" r="16"/><g class="why__map-glyph" transform="translate(277 253)"><rect x="5" y="7" width="12" height="17" rx="1.5"/><path d="M8.5 11h1.5M12 11h1.5M8.5 14.5h1.5M12 14.5h1.5M8.5 18h1.5M12 18h1.5M9.5 24v-3h3v3"/></g><text x="288" y="298" text-anchor="middle" data-i18n="map.part">협력사</text></g>
+<g class="why__map-node n-staff"><circle class="why__map-halo" cx="72" cy="268" r="24"/><circle class="why__map-dot" cx="72" cy="268" r="16"/><g class="why__map-glyph" transform="translate(61 253)"><circle cx="11" cy="12" r="4"/><path d="M4 24c1.2-4 3.6-6 7-6s5.8 2 7 6"/></g><text x="72" y="298" text-anchor="middle" data-i18n="map.staff">임직원</text></g>
+<g class="why__map-node n-brand"><circle class="why__map-halo" cx="30" cy="165" r="24"/><circle class="why__map-dot" cx="30" cy="165" r="16"/><g class="why__map-glyph" transform="translate(19 150)"><path d="M4 13l2-5h10l2 5"/><path d="M4 13c0 1.5 1.3 2.5 2.5 2.5S9 14.5 9 13c0 1.5 1.3 2.5 2.5 2.5S14 14.5 14 13c0 1.5 1.3 2.5 2.5 2.5S19 14.5 19 13"/><path d="M5.5 16v8h11v-8"/><path d="M9.5 24v-4.5h3V24"/></g><text x="30" y="195" text-anchor="middle" data-i18n="map.brand">브랜드</text></g>
+            </svg>
+          </div>
+        </div>
+        <ul class="why__list">
+          <li class="why__item fade-up" data-map="1">
+            <span class="why__num" aria-hidden="true">01</span>
+            <div>
+              <h3 data-i18n="why.1.h">공급사와 바이어를 연결합니다</h3>
+              <p data-i18n="why.1.p">공급사마다 다른 양식의 오퍼를 AI로 표준화해 바이어에게 전달하고, 주문으로 연결합니다.</p>
+              <a class="chip" href="#build" data-i18n="why.1.chip">TOS</a>
+            </div>
+          </li>
+          <li class="why__item fade-up" data-map="2">
+            <span class="why__num" aria-hidden="true">02</span>
+            <div>
+              <h3 data-i18n="why.2.h">바이어와 소비자를 연결합니다</h3>
+              <p data-i18n="why.2.p">셀러의 상품과 주문을 판매 채널과 양방향으로 연동해 소비자에게 전달합니다.</p>
+              <a class="chip" href="#build" data-i18n="why.2.chip">셀러 OMS</a>
+            </div>
+          </li>
+          <li class="why__item fade-up" data-map="3">
+            <span class="why__num" aria-hidden="true">03</span>
+            <div>
+              <h3 data-i18n="why.3.h">사람과 사람을 연결합니다</h3>
+              <p data-i18n="why.3.p">프로젝트와 일감을 중심으로 부서 간 협업과 외부 협력사와의 협업을 한 시스템에서 관리합니다.</p>
+              <a class="chip" href="#build" data-i18n="why.3.chip">워크 매니지먼트 시스템</a>
+            </div>
+          </li>
+          <li class="why__item fade-up" data-map="4">
+            <span class="why__num" aria-hidden="true">04</span>
+            <div>
+              <h3 data-i18n="why.4.h">비즈니스와 비즈니스를 연결합니다</h3>
+              <p data-i18n="why.4.p">트렉시가 27년간 쌓아 온 브랜드·공급사·바이어 네트워크를 기반으로, 기업 간 거래를 플랫폼으로 옮겨 갑니다.</p>
+              <a class="chip" href="#group" data-i18n="why.4.chip">트렉시 네트워크</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 연혁 ===== -->
+    <section class="section history" id="history">
+      <div class="container">
+        <div class="section__head fade-up">
+          <p class="section__label">History</p>
+          <h2 class="section__title" data-i18n="history.title">B2C 커머스에서 유통 현장의 AX로</h2>
+          <p class="section__desc" data-i18n="history.desc">B2C 커머스 플랫폼에서 출발해 트렉시의 B2B 시스템과 업무 시스템으로 영역을 넓혀 왔습니다.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item fade-up">
+            <span class="timeline__year">2020</span>
+            <div class="timeline__body">
+              <h3 data-i18n="h.2020.t">주식회사 커넥틀리 설립</h3>
+              <ul class="timeline__events">
+                <li data-i18n="h.2020.1">1월 : 설립</li>
+                <li data-i18n="h.2020.2">8월 : 유아동 메타커머스 플랫폼 <b>찜콩</b> 오픈</li>
+                <li data-i18n="h.2020.3">12월 : 퓨처플레이 투자 유치</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item fade-up">
+            <span class="timeline__year">2021</span>
+            <div class="timeline__body">
+              <h3 data-i18n="h.2021.t">엔젤 투자 유치</h3>
+              <ul class="timeline__events">
+                <li data-i18n="h.2021.1">4월 : AAA 엔젤 투자조합 투자 유치</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item fade-up">
+            <span class="timeline__year">2022</span>
+            <div class="timeline__body">
+              <h3 data-i18n="h.2022.t">럭셔리 커머스 플랫폼 <b>비본</b> 오픈</h3>
+              <ul class="timeline__events">
+                <li data-i18n="h.2022.1">8월 : 트렉시 1차 투자 유치</li>
+                <li data-i18n="h.2022.2">10월 : B2C 럭셔리 패션 플랫폼 오픈</li>
+                <li data-i18n="h.2022.3">12월 : 등록 상품 10만 개 돌파</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item fade-up">
+            <span class="timeline__year">2023</span>
+            <div class="timeline__body">
+              <h3 data-i18n="h.2023.t">트렉시 자회사 편입</h3>
+              <ul class="timeline__events">
+                <li data-i18n="h.2023.1">3월 : 트렉시 자회사로 편입</li>
+                <li data-i18n="h.2023.2">5월 : 비본을 트렉시 공식몰 <b>SETOF</b>로 전환하는 개발 착수</li>
+                <li data-i18n="h.2023.3">5월 : 트렉시의 기술 회사로 역할 전환</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item fade-up">
+            <span class="timeline__year">2024</span>
+            <div class="timeline__body">
+              <h3 data-i18n="h.2024.t">트렉시 공식몰 <b>SETOF</b> 오픈</h3>
+              <ul class="timeline__events">
+                <li data-i18n="h.2024.1">4월 : 비본 리뉴얼 후 SETOF로 이름 변경 후 재오픈</li>
+                <li data-i18n="h.2024.2">7월 : 국내외 커머스 채널 5곳 API 연동 및 BtoBtoC 입점</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item fade-up">
+            <span class="timeline__year">2025</span>
+            <div class="timeline__body">
+              <h3 data-i18n="h.2025.t">B2B 시스템 <b>TOS</b> 오픈</h3>
+              <ul class="timeline__events">
+                <li data-i18n="h.2025.1">5월 : TOS(Trexi Order System, 가칭) 개발 착수</li>
+                <li data-i18n="h.2025.2">9월 : TOS 오픈, 트렉시 내부 운영 시작</li>
+                <li data-i18n="h.2025.3">10월 : SETOF 어드민을 셀러 OMS로 전환 개발, 네이버 스마트스토어 디즈니 브랜드샵 연동 완료</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item fade-up">
+            <span class="timeline__year">2026</span>
+            <div class="timeline__body">
+              <h3 data-i18n="h.2026.t">트렉시 <b>AX</b> 전환 본격화</h3>
+              <ul class="timeline__events">
+                <li data-i18n="h.2026.1">7월 : TOS AI 라인시트 표준화 기능 개발</li>
+                <li data-i18n="h.2026.2">11월 : 협업·일감 관리 시스템(가칭) 개발 완료, 트렉시 전사 사용 시작</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 모회사 트렉시 ===== -->
+    <section class="section group" id="group">
+      <div class="container">
+        <div class="group__card group__card--side fade-up">
+          <figure class="group__visual">
+            <img src="assets/trexi-american-needle.webp" alt="American Needle 25 컬렉션 캠페인 화보" width="1000" height="522" loading="lazy">
+          </figure>
+          <div class="group__body">
+          <div class="group__text">
+            <p class="section__label">Parent Company</p>
+            <img class="group__logo" src="assets/trexi-logo-white.png" alt="trexi 로고" width="1123" height="477" loading="lazy">
+            <h2 class="section__title" data-i18n="group.title">글로벌 브랜드 유통 전문기업, 트렉시</h2>
+            <p class="section__desc" data-i18n="group.desc">
+              트렉시는 1999년 작은 스포츠 매장에서 출발해, 검증된 글로벌 공급 네트워크로 글로벌 브랜드를 한국 시장에 연결하는 유통 전문기업으로 성장했습니다.
+              도매(B2B) · 글로벌 소싱 · 온라인 커머스(B2C) · 브랜드 총판에 이어 B2B 플랫폼 TOS(가칭)를 준비하며, 다섯 개 사업을 하나의 네트워크로 잇고 있습니다.
+            </p>
+            <a href="https://trexi.kr" target="_blank" rel="noopener" class="btn btn--ghost" data-i18n="group.btn">trexi.kr 방문하기</a>
+          </div>
+          <dl class="group__facts">
+            <div><dt data-i18n="group.f1.dt">유통 경력</dt><dd data-i18n="group.f1.dd">27년 <small>1999 창업 · 2009 법인</small></dd></div>
+            <div><dt data-i18n="group.f2.dt">파트너 네트워크</dt><dd data-i18n="group.f2.dd">300+ <small>브랜드 · 공급사 · 바이어</small></dd></div>
+            <div><dt data-i18n="group.f3.dt">주요 채널</dt><dd>POIZON · SHEIN JP · BUYMA · TMALL · COUPANG</dd></div>
+            <div><dt data-i18n="group.f4.dt">사업 영역</dt><dd data-i18n="group.f4.dd">도매(B2B) · 글로벌 소싱 · 온라인 커머스(B2C) · 브랜드 총판 · B2B 플랫폼 TOS(가칭)</dd></div>
+          </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 문의 ===== -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__info fade-up">
+          <p class="section__label">Contact</p>
+          <h2 class="section__title" data-i18n="contact.title">함께 만들 파트너를<br>찾고 있습니다</h2>
+          <p class="section__desc" data-i18n="contact.desc">플랫폼 협업, 채널 연동, 채용에 관한 문의를 기다립니다.</p>
+          <ul class="contact__list">
+            <li><span data-i18n="contact.email">이메일</span><a href="mailto:contact@connectly.co.kr">contact@connectly.co.kr</a></li>
+            <li><span data-i18n="contact.tel">전화</span><a href="tel:+821033525686" data-i18n="contact.telno">010-3352-5686</a></li>
+            <li><span data-i18n="contact.addr">주소</span><address data-i18n="contact.address">서울특별시 마포구 성지길 25-11, 3층 비020호 (합정동, 오구빌딩)</address></li>
+          </ul>
+        </div>
+
+        <form class="contact__form fade-up" id="contactForm" action="#" method="post" novalidate data-email="contact@connectly.co.kr">
+          <div class="field">
+            <label for="name" data-i18n="form.name">이름 <em>*</em></label>
+            <input type="text" id="name" name="name" placeholder="성함" data-i18n-placeholder="form.name.ph" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="form.email">이메일 <em>*</em></label>
+            <input type="email" id="email" name="email" placeholder="example@company.com" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="company" data-i18n="form.company">회사명</label>
+            <input type="text" id="company" name="company" placeholder="회사명 (선택)" data-i18n-placeholder="form.company.ph" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="topic" data-i18n="form.topic">문의 유형</label>
+            <select id="topic" name="topic">
+              <option value="파트너 협업" data-i18n="form.opt1">파트너 협업</option>
+              <option value="플랫폼 · 채널 연동" data-i18n="form.opt2">플랫폼 · 채널 연동</option>
+              <option value="채용" data-i18n="form.opt3">채용</option>
+              <option value="기타" data-i18n="form.opt4">기타</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="form.message">문의 내용 <em>*</em></label>
+            <textarea id="message" name="message" rows="5" placeholder="문의하실 내용을 적어 주세요" data-i18n-placeholder="form.message.ph" required></textarea>
+          </div>
+          <div class="field field--check">
+            <label class="check">
+              <input type="checkbox" id="agree" name="agree" required>
+              <span data-i18n="form.agree">(필수) 개인정보 수집·이용에 동의합니다. <a href="privacy.html" target="_blank" rel="noopener">내용 보기</a></span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block" data-i18n="form.submit">문의 보내기</button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 푸터 ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-white.png" alt="CONNECTLY" class="logo__img logo__img--footer">
+        <p data-i18n="footer.tagline">연결이 만드는 무한한 가치 · Connect, infinitely.</p>
+      </div>
+      <div class="footer__info">
+        <p data-i18n="footer.info1">주식회사 커넥틀리 | 대표 권용진 | 사업자등록번호 870-86-01697</p>
+        <p data-i18n="footer.info2">서울특별시 마포구 성지길 25-11, 3층 비020호 (합정동, 오구빌딩) | 010-3352-5686</p>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="year"></span> Connectly Inc. All rights reserved.</p>
+        <div class="footer__links">
+          <a href="privacy.html" class="footer__link" data-i18n="footer.privacy">개인정보처리방침</a>
+          <a href="https://trexi.kr" target="_blank" rel="noopener" class="footer__link">trexi.kr</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=20261127a"></script>
+  <script src="js/intro.js?v=20261126s"></script>
+  <script src="js/main.js?v=20261126z"></script>
+</body>
+</html>

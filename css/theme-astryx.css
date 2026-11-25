@@ -1,0 +1,31 @@
+/* =========================================================
+   Astryx Stone 테마 연결 (2026-11-25 확정)
+   index.html 의 <html data-astryx-theme="stone" data-theme="dark"> 와 css/vendor/astryx/stone/theme.css 가
+   토큰(색·글꼴·반경)을 정의하고, 여기서 사이트의 기본 변수를 그 토큰에 연결한다.
+   브랜드 강조색(보라·시안)과 한글 본문(Pretendard)은 유지. 영문·숫자만 Montserrat(제목)/Figtree(본문).
+   ========================================================= */
+html[data-astryx-theme] {
+  --bg: var(--color-background-body);
+  --bg-2: var(--color-background-surface);
+  --surface: var(--color-background-card);
+  --surface-2: var(--color-background-muted);
+  --border: var(--color-border);
+  --border-strong: var(--color-border-emphasized);
+  --text: var(--color-text-primary);
+  --text-2: var(--color-text-secondary);
+  --muted: color-mix(in oklab, var(--color-text-secondary) 84%, var(--color-background-body)); /* 작은 라벨 대비 4.5:1 이상 */
+  --radius: var(--radius-container);
+  --radius-sm: var(--radius-element);
+}
+/* 한글: Pretendard 유지 (2026-11-25 확정. SUIT·Paperlogy·Freesentation 과 비교 후) */
+html { --kfont-body: "Pretendard"; --kfont-head: "Pretendard"; }
+html[data-astryx-theme] body {
+  /* Astryx 의 --font-family-body 는 sans-serif 로 끝나 한글이 시스템 글꼴로 빠지므로, 테마의 첫 글꼴만 쓰고 한글 글꼴을 바로 뒤에 둔다 */
+  font-family: "Figtree", var(--kfont-body), "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+html[data-astryx-theme] h1, html[data-astryx-theme] h2, html[data-astryx-theme] h3,
+html[data-astryx-theme] .stat__num, html[data-astryx-theme] .timeline__year, html[data-astryx-theme] .why__num,
+html[data-astryx-theme] .section__label, html[data-astryx-theme] .group__facts dd, html[data-astryx-theme] .btn,
+html[data-astryx-theme] .intro__line1 {
+  font-family: "Montserrat", var(--kfont-head), "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
