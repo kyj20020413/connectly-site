@@ -189,7 +189,7 @@
     'pp.title': 'Privacy Policy',
     'pp.intro': 'Connectly Inc. (the "Company") protects users\u2019 personal data under the Personal Information Protection Act of Korea and publishes this policy to handle related concerns promptly. It applies to the contact feature of the Company website (connectly.co.kr).',
     'pp.s1.h': '1. Data we collect and how',
-    'pp.s1.p': 'The Company collects the information below through the "Contact" form on the website. The form opens the user\u2019s own mail app and sends the content to the Company\u2019s email address; nothing is stored on the website server.',
+    'pp.s1.p': 'The Company collects the information below through the "Contact" form on the website. Submissions are relayed by email to the Company\u2019s address through a form-processing service (Web3Forms); the website itself stores nothing.',
     'pp.s1.l1': 'Required: name, email address, message',
     'pp.s1.l2': 'Optional: company name, inquiry type',
     'pp.s1.l3': 'If you contact us directly by phone or email, the contact details and content you provide in that process',
@@ -199,7 +199,7 @@
     'pp.s3.h': '3. Retention period',
     'pp.s3.p': 'Data is kept for one year after the inquiry is closed and then deleted without delay. It is deleted immediately on request. Where a law requires retention, data is kept for the period that law prescribes.',
     'pp.s4.h': '4. Third parties and processors',
-    'pp.s4.p': 'The Company does not provide personal data to third parties. To operate company email, the Company uses Google Workspace (email service) by Google LLC, where inquiry emails are stored; in that process data may be transferred overseas to Google data centers.',
+    'pp.s4.p': 'The Company does not provide personal data to third parties. Two processors are used: Web3Forms (form submission relay) delivers what you enter in the contact form to the Company by email, and Google Workspace (email service) by Google LLC stores the Company\u2019s email. In that process data may be transferred overseas to those providers\u2019 data centers.',
     'pp.s5.h': '5. Your rights',
     'pp.s5.p': 'You may request access to, correction or deletion of, or suspension of processing of your personal data at any time. Requests sent by email to the data protection officer below are handled without delay.',
     'pp.s6.h': '6. Cookies and browser storage',
@@ -225,18 +225,20 @@
     ko: {
       menuOpen: '메뉴 열기', menuClose: '메뉴 닫기',
       required: '필수 항목을 확인해 주세요.',
-      noEmail: '문의 이메일 주소가 아직 설정되지 않았습니다. (index.html 의 contactForm data-email 값을 입력하세요)',
       subject: '[커넥틀리 홈페이지 문의]',
       fName: '이름', fEmail: '이메일', fCompany: '회사명', fTopic: '문의 유형',
-      opened: '메일 앱이 열립니다. 전송이 되지 않으면 {email} 로 직접 보내 주세요.'
+      sending: '보내는 중…',
+      sent: '문의가 접수되었습니다. 확인 후 입력하신 이메일로 답변드리겠습니다.',
+      failed: '전송에 실패했습니다. 잠시 후 다시 시도하거나 contact@connectly.co.kr 로 보내 주세요.'
     },
     en: {
       menuOpen: 'Open menu', menuClose: 'Close menu',
       required: 'Please fill in the required fields.',
-      noEmail: 'The contact email address is not set yet. (Set data-email on contactForm in index.html)',
       subject: '[Connectly website inquiry]',
       fName: 'Name', fEmail: 'Email', fCompany: 'Company', fTopic: 'Inquiry type',
-      opened: 'Your mail app will open. If it does not, please email {email} directly.'
+      sending: 'Sending…',
+      sent: 'Your inquiry has been received. We will reply to the email address you entered.',
+      failed: 'Sending failed. Please try again later or email contact@connectly.co.kr directly.'
     }
   };
 

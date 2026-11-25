@@ -214,49 +214,47 @@
   }
 
   /* ---------- 문의 폼 ----------
-     기본 동작: data-email 에 지정된 주소로 메일 앱을 여는 mailto 방식.
-     Formspree 등 폼 서비스를 쓰려면 form 의 action 을 해당 URL 로 바꾸고
-     아래 useMailto 를 false 로 두면 됩니다. */
+     Web3Forms(https://web3forms.com) 로 제출 → contact@connectly.co.kr 로 메일 전달.
+     JS 가 꺼져 있으면 form 의 action/method 로 일반 제출되어 Web3Forms 결과 페이지로 이동한다. */
   var form = document.getElementById('contactForm');
   var note = document.getElementById('formNote');
-  var useMailto = true;
+  var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
   function setNote(msg, cls) {
     note.textContent = msg;
     note.className = 'form__note' + (cls ? ' ' + cls : '');
   }
 
-  form.addEventListener('submit', function (e) {
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
     var valid = true;
     form.querySelectorAll('.field').forEach(function (f) { f.classList.remove('is-invalid'); });
     form.querySelectorAll('[required]').forEach(function (input) {
       var ok = input.type === 'checkbox' ? input.checked : (input.value.trim() !== '' && (input.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)));
       if (!ok) { valid = false; input.closest('.field').classList.add('is-invalid'); }
     });
-    if (!valid) { e.preventDefault(); setNote(msg('required'), 'is-err'); return; }
+    if (!valid) { setNote(msg('required'), 'is-err'); return; }
+    if (form.querySelector('[name="botcheck"]').checked) return; /* 스팸 봇 */
 
-    if (!useMailto) return; // 폼 서비스로 그대로 전송
-
-    e.preventDefault();
-    var to = (form.getAttribute('data-email') || '').trim();
-    if (!to) {
-      setNote(msg('noEmail'), 'is-err');
-      return;
-    }
-    var d = new FormData(form);
     var topicEl = form.querySelector('#topic');
-    var topic = topicEl ? topicEl.options[topicEl.selectedIndex].text : (d.get('topic') || '');
-    var subject = msg('subject') + ' ' + topic + ' - ' + d.get('name');
-    var body = [
-      msg('fName') + ': ' + d.get('name'),
-      msg('fEmail') + ': ' + d.get('email'),
-      msg('fCompany') + ': ' + (d.get('company') || '-'),
-      msg('fTopic') + ': ' + topic,
-      '',
-      d.get('message')
-    ].join('\n');
-    window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    setNote(msg('opened').replace('{email}', to), 'is-ok');
+    var topic = topicEl ? topicEl.options[topicEl.selectedIndex].text : '';
+    var fd = new FormData(form);
+    fd.delete('botcheck');
+    fd.delete('agree');
+    fd.set('topic', topic);
+    fd.set('subject', msg('subject') + ' ' + topic + ' - ' + (fd.get('name') || ''));
+    fd.set('replyto', fd.get('email') || '');
+
+    submitBtn.disabled = true;
+    setNote(msg('sending'), '');
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.success, j: j }; }); })
+      .then(function (res) {
+        if (res.ok) { form.reset(); setNote(msg('sent'), 'is-ok'); }
+        else { setNote(msg('failed'), 'is-err'); }
+      })
+      .catch(function () { setNote(msg('failed'), 'is-err'); })
+      .then(function () { submitBtn.disabled = false; });
   });
 
   /* ---------- 연도 ---------- */

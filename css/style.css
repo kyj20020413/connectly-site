@@ -613,6 +613,7 @@ body.is-lang-switching main, body.is-lang-switching .footer { opacity: 0; }
 .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(139,108,255,0.2); }
 .field.is-invalid input, .field.is-invalid textarea { border-color: #f87171; }
 .field--check { margin-top: 2px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .check { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: var(--text-2); line-height: 1.5; cursor: pointer; }
 .check input { width: 16px; height: 16px; margin: 2px 0 0; flex: 0 0 auto; accent-color: var(--accent); }
 .check a { color: var(--accent-2); text-decoration: underline; text-underline-offset: 2px; }

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="stylesheet" href="css/vendor/astryx/stone/fonts.css">
   <link rel="stylesheet" href="css/vendor/astryx/stone/theme.css">
-  <link rel="stylesheet" href="css/style.css?v=20261126z">
+  <link rel="stylesheet" href="css/style.css?v=20261127b">
   <link rel="stylesheet" href="css/theme-astryx.css?v=20261126y">
 </head>
 <body class="is-intro">
@@ -552,7 +552,11 @@
           </ul>
         </div>
 
-        <form class="contact__form fade-up" id="contactForm" action="#" method="post" novalidate data-email="contact@connectly.co.kr">
+        <form class="contact__form fade-up" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate data-email="contact@connectly.co.kr">
+          <!-- Web3Forms: 제출 내용을 contact@connectly.co.kr 로 메일 전달 (공개 키) -->
+          <input type="hidden" name="access_key" value="732fec89-966b-45ae-a74f-49cd6e12a1e3">
+          <input type="hidden" name="from_name" value="Connectly Website">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
             <label for="name" data-i18n="form.name">이름 <em>*</em></label>
             <input type="text" id="name" name="name" placeholder="성함" data-i18n-placeholder="form.name.ph" required autocomplete="name">
@@ -613,8 +617,8 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=20261127a"></script>
+  <script src="js/i18n.js?v=20261127b"></script>
   <script src="js/intro.js?v=20261126s"></script>
-  <script src="js/main.js?v=20261126z"></script>
+  <script src="js/main.js?v=20261127b"></script>
 </body>
 </html>
