@@ -250,7 +250,10 @@
     fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.success, j: j }; }); })
       .then(function (res) {
-        if (res.ok) { form.reset(); setNote(msg('sent'), 'is-ok'); }
+        if (res.ok) {
+          if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form: 'contact', topic: topic });
+          form.reset(); setNote(msg('sent'), 'is-ok');
+        }
         else { setNote(msg('failed'), 'is-err'); }
       })
       .catch(function () { setNote(msg('failed'), 'is-err'); })
