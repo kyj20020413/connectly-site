@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://connectly.co.kr/sitemap.xml
+#DaumWebMasterTool:72a1d5e75cc91708ca71c8fa887603fdcbd67f12ccf8befab208cfc9d38fc258:bBY3xhlFAprgQb834vQqzA==
